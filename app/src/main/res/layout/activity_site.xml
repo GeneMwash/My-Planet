@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:background="@mipmap/mara"
     android:layout_height="match_parent"
-    tools:context=".ui.sites.">
+    tools:context=".SitesActivity">
 
   <View
       android:id="@+id/view"
@@ -23,13 +23,14 @@
       android:layout_marginStart="16dp"
       android:layout_marginTop="16dp"
       android:background="?attr/selectableItemBackground"
-      android:contentDescription="@string/to_do"
+      android:contentDescription="@string/todo"
       android:minWidth="48dp"
       android:minHeight="48dp"
       android:padding="8dp"
+      android:src="@drawable/ic_menu_camera"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,ImageContrastCheck,ImageContrastCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
+      tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
   <TextView
       android:id="@+id/textView"
@@ -40,12 +41,12 @@
       android:gravity="center_horizontal"
       android:letterSpacing="0.025"
       android:text="@string/NATURES_FULLNESS"
-      android:textColor="#EF6C00"
+      android:textColor="@color/white"
       android:textSize="28sp"
       android:textStyle="bold"
       app:layout_constraintStart_toEndOf="@+id/backB"
       app:layout_constraintTop_toTopOf="parent"
-      tools:ignore="TextContrastCheck,TextContrastCheck" />
+      tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
   <ImageButton
       android:id="@+id/logOutB"
@@ -53,15 +54,15 @@
       android:layout_height="wrap_content"
       android:layout_marginTop="16dp"
       android:layout_marginEnd="16dp"
+      android:background="@drawable/ic_menu_gallery"
+      android:contentDescription="@string/todo"
       android:minWidth="48dp"
       android:minHeight="48dp"
       android:padding="8dp"
-
       app:layout_constraintCircleRadius="24dp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck"
-      android:contentDescription="@string/to_do" />
+      tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,ImageContrastCheck,ImageContrastCheck,ImageContrastCheck" />
 
   <androidx.cardview.widget.CardView
       android:id="@+id/cardView"
@@ -87,7 +88,7 @@
           android:layout_height="wrap_content"
           android:layout_marginStart="16dp"
           android:layout_marginTop="16dp"
-          android:text="@string/first_last"
+          android:text="@string/FIRSTNAME_LASTNAME"
           android:textAllCaps="true"
           android:textColor="@color/green_500"
           android:textSize="16sp"
@@ -112,10 +113,9 @@
           android:layout_height="wrap_content"
           android:layout_marginStart="16dp"
           android:layout_marginBottom="8dp"
-          android:text="@string/to_do"
+          android:text="@string/todo"
           app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          tools:ignore="DuplicateSpeakableTextCheck" />
+          app:layout_constraintStart_toStartOf="parent" />
 
       <com.google.android.material.button.MaterialButton
           android:id="@+id/editProfileB"
@@ -133,14 +133,15 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginEnd="16dp"
+          android:background="@drawable/common_google_signin_btn_icon_dark_normal"
+          android:contentDescription="@string/todo"
           android:minWidth="48dp"
           android:minHeight="48dp"
           android:padding="8dp"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintTop_toTopOf="parent"
-          tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
-          android:contentDescription="@string/to_do" />
+          tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -178,20 +179,20 @@
             android:id="@+id/image_view1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:src="@mipmap/camping"
             app:layout_constraintBottom_toTopOf="@+id/textView1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/to_do" />
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@mipmap/camping"
             android:gravity="center"
-            android:text="@string/The_HighLands"
+            android:text="@string/HIGHLANDS"
             android:textAllCaps="true"
             android:textColor="@color/green_500"
             android:textSize="14sp"
@@ -226,20 +227,20 @@
             android:id="@+id/image_view20"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:src="@mipmap/oceans"
             app:layout_constraintBottom_toTopOf="@+id/textView20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/to_do" />
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/textView20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@mipmap/oceans"
             android:gravity="center"
-            android:text="@string/The_Waters"
+            android:text="@string/THE_WATERS"
             android:textAllCaps="true"
             android:textColor="@color/green_500"
             android:textSize="14sp"
@@ -281,28 +282,28 @@
 
       <androidx.constraintlayout.widget.ConstraintLayout
           android:layout_width="match_parent"
-          android:layout_height="match_parent">
+          android:layout_height="match_parent"
+          android:background="@mipmap/outdoors">
 
         <ImageView
             android:id="@+id/image_view21"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:src="@mipmap/outdoors"
             app:layout_constraintBottom_toTopOf="@+id/textView21"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/to_do" />
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/textView21"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/The_Great_OutDoors"
+            android:text="@string/OUTDOORS"
             android:textAllCaps="true"
-            android:textColor="@color/green_500"
+            android:textColor="#FFF176"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -329,28 +330,28 @@
 
       <androidx.constraintlayout.widget.ConstraintLayout
           android:layout_width="match_parent"
-          android:layout_height="match_parent">
+          android:layout_height="match_parent"
+          android:background="@mipmap/deserts">
 
         <ImageView
             android:id="@+id/image_view22"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:src="@mipmap/deserts"
             app:layout_constraintBottom_toTopOf="@+id/textView22"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/to_do" />
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/textView22"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text=""
+            android:text="@string/THE_EXTREMES"
             android:textAllCaps="true"
-            android:textColor="@color/green_500"
+            android:textColor="#4E342E"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -389,26 +390,26 @@
 
       <androidx.constraintlayout.widget.ConstraintLayout
           android:layout_width="match_parent"
-          android:layout_height="match_parent">
+          android:layout_height="match_parent"
+          android:background="@mipmap/historicalsites">
 
         <ImageView
             android:id="@+id/image_view23"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:src="@mipmap/historicalsites"
             app:layout_constraintBottom_toTopOf="@+id/textView23"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/to_do" />
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/textView23"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/Historical_sites"
+            android:text="@string/HISTORICAL"
             android:textAllCaps="true"
             android:textColor="#FFF176"
             android:textSize="14sp"
@@ -443,8 +444,8 @@
             android:id="@+id/image_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:background="@mipmap/download"
             android:hapticFeedbackEnabled="true"
-            android:src="@mipmap/download"
             app:layout_constraintBottom_toTopOf="@+id/textView4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -457,7 +458,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/Settings"
+            android:text="@string/SETTINGS"
             android:textAllCaps="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

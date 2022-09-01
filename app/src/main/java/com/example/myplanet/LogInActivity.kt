@@ -1,3 +1,4 @@
+
 package com.example.myplanet
 
 import android.content.Intent
@@ -13,7 +14,7 @@ import com.google.firebase.auth.FirebaseAuth
 class LogInActivity : AppCompatActivity() {
 
     private lateinit var tvRedirectSignUp: TextView
-    private lateinit var etEmail: EditText
+   private lateinit var etEmail: EditText
     private lateinit var etPass: EditText
     private lateinit var btnLogin: Button
 
@@ -41,7 +42,7 @@ class LogInActivity : AppCompatActivity() {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
             // using finish() to end the activity
-            finish()
+
         }
     }
 
@@ -54,12 +55,10 @@ class LogInActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(this) {
             if (it.isSuccessful) {
                 Toast.makeText(this, "Successfully LoggedIn", Toast.LENGTH_SHORT).show()
-                val intent=Intent(this,DashBoardActivity::class.java)
+                val intent = Intent(this, DashBoardActivity::class.java)
                 startActivity(intent)
             } else
                 Toast.makeText(this, "Log In failed ", Toast.LENGTH_SHORT).show()
-                    val intent=Intent(this,RegisterActivity::class.java)
-            startActivity(intent)
         }
     }
 

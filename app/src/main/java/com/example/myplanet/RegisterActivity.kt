@@ -13,8 +13,8 @@ import com.google.firebase.auth.FirebaseAuth
 
 
 class RegisterActivity : AppCompatActivity() {
-    private lateinit var etEmail: EditText
-    private lateinit var etConfPass: EditText
+   private lateinit var etEmail: EditText
+   private lateinit var etConfPass: EditText
     private lateinit var etPass: EditText
     private lateinit var btnSignUp: Button
     private lateinit var tvRedirectLogin: TextView
@@ -24,6 +24,7 @@ class RegisterActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
@@ -72,8 +73,7 @@ class RegisterActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(this) {
             if (it.isSuccessful) {
                 Toast.makeText(this, "Successfully Singed Up", Toast.LENGTH_SHORT).show()
-                finish()
-                val intent=Intent(this,MenuActivity::class.java)
+                val intent = Intent(this, SitesActivity::class.java)
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "Singed Up Failed!", Toast.LENGTH_SHORT).show()
